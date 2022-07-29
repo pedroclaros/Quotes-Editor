@@ -18,7 +18,8 @@ class QuotesController < ApplicationController
     if @quote.save
       redirect_to quotes_path, notice: "Quote was successfully created."
     else
-      render :new
+      # Add `status: :unprocessable_entity` here
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,13 +30,18 @@ class QuotesController < ApplicationController
     if @quote.update(quote_params)
       redirect_to quotes_path, notice: "Quote was successfully updated."
     else
-      render :edit
+      # Add `status: :unprocessable_entity` here
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @quote.destroy
-    redirect_to quotes_path, notice: "Quote was successfully destroyed."
+  
+    respond_to do |format|
+      format.html { redirect_to quotes_path, notice: "Quote was successfully destroyed." }
+      format.turbo_stream
+    end
   end
 
   private
