@@ -1,12 +1,12 @@
 require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
-  
+
   setup do
-    # We need to order quote as well in the system tests
+    login_as users(:accountant)
     @quote = Quote.ordered.first
   end
-
+  
   test "Showing a quote" do
     visit quotes_path
     click_link @quote.name
@@ -49,5 +49,6 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Delete", match: :first
     assert_no_text @quote.name
   end
+
 end
 
