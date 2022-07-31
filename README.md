@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Consideraciones:
 
-Things you may want to cover:
+* Ruby version: ruby 3.0.3p157
 
-* Ruby version
+* Rails version: Rails 7.0.3.1
 
-* System dependencies
+* Configuración: correr bundle, yarn y usar redis-server para probar los trabajos en segundo plano y tiempo real.
+Para que la aplicación funcione debe tener instalado previamente Redis y levantar servidor al mismo tiempo cn redis-server.
 
-* Configuration
+* Database: PostgreSQL
 
-* Database creation
+* Test: rails test:system 
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

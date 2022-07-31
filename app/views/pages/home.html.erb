@@ -1,5 +1,5 @@
 <main class="container">
-  <h1>Welcome to "Quote editor"</h1>
+  <h1>Welcome to "Quotes editor"</h1>
   <p>Quote services and products for your clients in one place.</p>
    
 
@@ -9,8 +9,10 @@
     <%= link_to "View quotes", quotes_path, class: "btn btn--dark" %>
   <% else %>
     <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
+     <!--
      <p>For test this application use the account: manager@kpmg.com, password: 123456</p>
      <p>For test real time update use the account: manager@kpmg.com, and open another window with user account@kpmg.com. password both: 123456</p>
      <p>Create new quote and see the automatically update in the other user (Turbo used)</p>   
+    -->
   <% end %>
 </main>
