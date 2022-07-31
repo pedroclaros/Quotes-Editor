@@ -13,4 +13,4 @@ Para que la aplicación funcione debe tener instalado previamente Redis y levant
 
 * Test: rails test:system 
 
-
+* Seed: rails db:seed (solo funciona con 3 usuarios, se pueden ver en el arhivo seeds usuario y contraseña) 
