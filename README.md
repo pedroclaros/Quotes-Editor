@@ -7,7 +7,7 @@ Consideraciones:
 * Rails version: Rails 7.0.3.1
 
 * Configuración: correr bundle, yarn y usar redis-server para probar los trabajos en segundo plano y tiempo real.
-Para que la aplicación funcione debe tener instalado previamente Redis y levantar servidor al mismo tiempo cn redis-server.
+Para que la aplicación funcione debe tener instalado previamente Redis y levantar servidor al mismo tiempo con redis-server.
 
 * Database: PostgreSQL
 
